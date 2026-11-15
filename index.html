@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="JS/main.js" defer></script>
+    <title>Movie Night</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="banner">
+            <h2 class="banner__title">Movie Night</h2>
+            <p class="banner__title--text">Conoce nuestro contenido</p>
+        </section>
+    </header>
+
+    <main class="principal">
+
+            <section class="search-section">
+               <h2>Busca tu serie favorita</h2>
+               <form id="search-form">
+               <input
+                type="text", id="search-input", placeholder="Escribe el nombre de una serie...">
+        <button type="submit">Buscar</button>
+    </form>
+</section>
+
+        <section class="subtitle">
+            <h2>Top 30 de hoy</h2>
+        </section>
+
+<div id="movies-grid" class="movies-grid"></div>
+        
+        <section class="movies-section">
+            <h2>Series y episodios</h2>
+            <div id="movies-grid" class="movies-grid">
+            </div>
+        </section>
+
+
+        <section class="products">
+            <article class="products__article">
+                <img src="IMG2/movies.jpg" alt="Movies">
+                <h3 class="nombre">Movies 2026</h3>
+                <p class="precio">5,99$</p>
+                <button class="button">Ver Ahora!</button>
+            </article>
+
+            <article class="products__article">
+                <img src="IMG2/movies.webp" alt="Movies">
+                <h3 class="nombre">Movies 2026</h3>
+                <p class="precio">7,99$</p>
+                <button class="button">Ver Ahora!</button>
+            </article>
+
+            <article class="products__article">
+                <img src="IMG2/movies3.jpg" alt="Movies">
+                <h3 class="nombre">Movies 2026</h3>
+                <p class="precio">3,99$</p>
+                <button class="button">Ver Ahora!</button>
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <article>
+            <p>Gracias por preferirnos!</p>
+        </article>
+    </footer>
+
+</body>
+</html>

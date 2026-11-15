@@ -1,0 +1,275 @@
+$mainColor: #ece9e9;
+$mainColorText: #d58300;
+$mainColorWhite: #fff;
+$mainBackgroundColor: #333;
+$fontFamily:"Lexend", arial, sans-serif;
+$textShadow: 1px 1px 1px #333;  
+
+@mixin flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin cursor {
+  cursor: pointer;
+}
+
+%link {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%button {
+  border-radius: 30%;
+  text-align: center;
+  width: 40%;
+  font-weight: 500;
+  color: $mainColor;
+  background-color: $mainBackgroundColor;
+}
+
+
+* {
+    font-family: $fontFamily; 
+}
+  
+  
+  
+body {
+    width: 100%;
+    font-size: 15px;
+    text-shadow: $textShadow;
+    Font-weight: 300;
+    margin: 0;
+    Color: $mainColorText;
+    background-color: $mainColor ;
+}
+  
+header {
+    background-color: #333;
+        margin: 0px;
+    box-sizing: border-box;
+}
+
+  
+.banner {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    background-image: url("../img2/27048.jpg");
+    color: $mainColorWhite;
+  
+
+  .banner__title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 35px;  
+    text-shadow: $textShadow;  
+    margin: 0% -1.5%;
+  }
+  
+  .banner__title--text {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    text-shadow: $textShadow;  
+    opacity: 0.6;
+    text-align: right;
+    margin: 0% -2%;
+  }
+}
+
+.products {
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  gap:5%;
+      margin: 0% 0% 0% 15%;
+  
+  
+  .products__article {
+    @include cursor;
+    text-align: center;
+  }
+  
+  img {
+    width: 180px;
+    margin-bottom: -15px;
+  }
+  
+  h3 {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-weight: 200;
+    font-size: 12px;
+  }
+}
+
+
+
+
+footer {
+    @extend %link;
+    background-image: url("../img2/moon.jpg");
+    background-size: cover;
+    display: block;
+    padding: 5% 0%;
+   
+  article {
+    p {
+      background-color: $mainColorWhite;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 30px;
+      margin: 0% 40%;
+      border: 1px dotted #000000;
+    }
+  }
+}
+
+
+
+.movies-section {
+  width: 85%;
+  margin: 40px auto;
+  text-align: center;
+
+  h2 {
+    font-size: 26px;
+    color: $mainColorText;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+
+
+.movies-card {
+  background-color: $mainColorWhite;
+  border-radius: 12px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h3 {
+    color: $mainBackgroundColor;
+    font-size: 14px;
+  }
+
+  p {
+    color: #666;
+    font-size: 12px;
+  }
+}
+
+
+
+.movies-info {
+  margin-bottom: 15px;
+}
+
+.movies-name {
+  color: $mainColorText;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+
+.movies-image-container {
+  width: 100%;
+}
+
+.movies-image {
+  width: 100%;
+  max-width: 180px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+
+@media (max-width: 900px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .movies-section {
+    width: 92%;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .movies-name {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.search-section {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+
+    h2 {
+        color: $mainColorText;
+        font-size: 24px;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    input {
+        width: 60%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    button {
+        @extend %button;
+        width: auto;
+        padding: 10px 20px;
+        border-radius: 20px;
+        @include cursor;
+    }
+}
+
+.subtitle {
+  border-radius: 30%;
+  text-align: center;
+}
